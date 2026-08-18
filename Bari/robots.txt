@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /cart.php
+Disallow: /checkout.php
+Disallow: /orders.php
+Disallow: /track_order.php
+Sitemap: /Bari/sitemap.php
