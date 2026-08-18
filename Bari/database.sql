@@ -21,8 +21,13 @@ CREATE TABLE IF NOT EXISTS users (
     address TEXT,
     city VARCHAR(50) DEFAULT 'Mumbai',
     pincode VARCHAR(10),
+    is_admin TINYINT(1) DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+-- Default Admin User (Password: admin123)
+INSERT INTO users (full_name, email, phone, password, address, city, pincode, is_admin) VALUES
+('Admin', 'admin@example.com', '0000000000', '$2y$10$V2RQlnxgyTWzWhx0v/4USebsk3PCxGOjr0yXMvZm3m14lo8I4rti6', 'Admin Address', 'Mumbai', '000000', 1);
 
 -- Categories Table
 CREATE TABLE IF NOT EXISTS categories (
